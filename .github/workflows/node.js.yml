@@ -9,13 +9,13 @@ jobs:
     name: My job
     runs-on: ubuntu-latest
     steps:
-      - name: Print a greeting
+    - name: Print a greeting
       env:
         MY_VAR: Hi there! my name is 
         FIRST_NAME: YSP
         MIDDLE_NAME: the
         LAST_NAME: Octocat
-      - run: |
+    - run: |
         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME
 
 
