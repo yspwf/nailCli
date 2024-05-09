@@ -1,0 +1,15 @@
+{
+  "name": "myprojet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bomb_kit.js": "^1.0.9",
+    "typescript": "^5.4.5"
+  }
+}
