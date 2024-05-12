@@ -24,6 +24,30 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  my_first_job:
+    name: my first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: Run a single-line script
+        run: echo "hello world!"
+  
+  my_second_job:
+    name: my second job
+    runs-on: macos-latest
+
+    steps:
+      - name: Run a multi-line script
+        env:
+          MY_VAR: hello world!
+          MY_NAME: YSP
+        run:
+          echo $MY_VAR
+          echo my name is $MY_NAME
+
+
 
 # name: Node.js CI
 # on: push
