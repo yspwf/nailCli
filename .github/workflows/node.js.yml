@@ -1,22 +1,46 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: Node.js CI
-on: push
+name: demo
+
+on: 
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+  workflow_dispatch:
 
 jobs:
-  my-job:
-    name: My job
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Print a greeting
-      env:
-        MY_VAR: Hi there! my name is 
-        FIRST_NAME: YSP
-        MIDDLE_NAME: the
-        LAST_NAME: Octocat
-    - run: |
-        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo hello world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+# name: Node.js CI
+# on: push
+
+# jobs:
+#   my-job:
+#     name: My job
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Print a greeting
+#       env:
+#         MY_VAR: Hi there! my name is 
+#         FIRST_NAME: YSP
+#         MIDDLE_NAME: the
+#         LAST_NAME: Octocat
+#     - run: |
+#         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME
 
 
 # on:
