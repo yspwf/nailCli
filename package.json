@@ -8,7 +8,7 @@
     "build": "webpack --config webpack.config.js --mode production"
   },
   "bin": {
-    "nodecli": "./dist/bundle.js"
+    "nailcli": "./dist/bundle.js"
   },
   "author": "",
   "license": "ISC",
